@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Information</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="body_github" >
+    {% for review in reviews %}
+    <div class="github-user">
+        <h1 class="header">GITHUB NAME: {{ review['name'] }}</h1>
+
+        <div class="about">
+            <h2>About {{ review['name'] }}</h2>
+            <p>{{ review['article'] }}</p>
+        </div>
+
+        <div class="repo-list">
+            <h2>Popular Repositories</h2>
+            {% for repo in review['repositories'] %}
+                <div class="repo-item">
+                    <a href="https://github.com/{{ repo }}" class="repo-link" target="_blank">{{ repo }}</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>

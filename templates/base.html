@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+       <P style="padding-left: 35%; font-weight: 700; font-size: large;">WEBSCRAPER</P>
+        <ul> 
+           <li>After entering the product name or github username, press the "Search" button or hit "Enter" to begin the search process.</li>
+           <li>The web scraper will display a list of results related to your search query.</li>
+           <br>
+           <br>
+           <p>NB: the search might take several minutes before handing you the results</p>
+        </ul>
+        
+
+    {% block body %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Search</h1>
+
+    <div class="form">
+        <P>which of this websites do you want to scrap? </P>
+        <div id="websites">
+            <a href="#" id='a' onclick="showForm('jumiaform')">
+            <img href="" src="{{url_for('static', filename='jumia.jpeg')}}" alt="JUMIA" >
+            </a>
+           
+            <a href="#" id='a' onclick="showForm('githubform')">
+            <img src="{{url_for('static', filename='github.png ')}}" alt="GITHUB" >
+            </a>
+        </div>
+        <form action="/review" id="jumiaform" class="formdata"  style="display: none;" method="POST">
+            <P>search for information from jumia products</P>
+              <br>
+              <br>
+            <label for="content">Enter your search</label>
+            <input type="text" placeholder="enter text here" name="content" id="content">
+            <input type="hidden" name="form_type" value="jumia">
+            <input type="submit" value="Search">
+            
+        </form>
+
+        <form action="/review" id="githubform" class="formdata" style="display: none;"  method="POST">
+            <P>search for information about a github account</P>
+              <br>
+              <br>
+            <label for="content">Enter your search</label>
+            <input type="text" placeholder="enter text here" name="content" id="content">
+            <input type="hidden" name="form_type" value="github">
+            <input type="submit" value="Search">
+            
+        </form>
+
+        
+        <script>
+                function showForm(formId) {
+                    // Hide all forms
+                    var forms = document.querySelectorAll('.formdata');
+                    forms.forEach(function(form) {
+                        form.style.display = 'none';
+                    });
+
+                    // Show the selected form
+                    var selectedForm = document.getElementById(formId);
+                    if (selectedForm) {
+                        selectedForm.style.display = 'block';
+                    }
+                   }
+            
+        </script>
+       
+    </div>
+</div>
+{% endblock %}
