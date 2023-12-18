@@ -9,7 +9,7 @@ This repository contains a web scraper that extracts information from both GitHu
 ### 1. GitHub Scraper
 
 - **Functionality**: The GitHub scraper fetches data related to user profiles, repositories, and other GitHub-specific information.
-- **Usage**: Users can input GitHub usernames, repository names, or specific queries to obtain detailed information.
+- **Usage**: Users can input GitHub username to obtain detailed information.
 
 ### 2. Jumia Online Shopping Scraper
 
@@ -35,7 +35,8 @@ Visit http://localhost:5000 in your web browser.
 
 **Input Queries:**
 
-For GitHub, enter GitHub usernames, repository names, or specific queries.
+For GitHub, enter GitHub username.
 For Jumia, input product names or search terms.
+
 **View Results:**
-Results will be displayed on the web interface, providing users with relevant information based on their queries.
+Results will be displayed on the web interface, providing users with relevant information based on the query.
