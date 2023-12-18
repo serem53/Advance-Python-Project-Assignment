@@ -22,10 +22,10 @@ This repository contains a web scraper that extracts information from both GitHu
    ```bash
    git clone https://github.com/serem53/Advance-Python-Project-Assignment.git
 
-   ```bash
+   
    pip install -r requirements.txt
 
-   ```bash
+   
    python app.py
 
 Visit http://localhost:5000 in your web browser.
