@@ -21,12 +21,15 @@ This repository contains a web scraper that extracts information from both GitHu
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/serem53/Advance-Python-Project-Assignment.git
-
-   
+   ```
+2. **Install requirements:**
+    ```bash  
    pip install -r requirements.txt
+   ```
+2. **run the app:**
+   ```bash
+   python app.py    
 
-   
-   python app.py
 
 Visit http://localhost:5000 in your web browser.
 
